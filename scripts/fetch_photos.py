@@ -122,6 +122,12 @@ def main():
     for rid, c in conf.items():
         path = os.path.join(OUT_DIR, rid + ".jpg")
         have = credits.get(rid, {}).get("title")
+        if c.get("none"):  # no suitable photo: the app shows the coloured placeholder
+            if os.path.exists(path):
+                os.remove(path)
+            credits.pop(rid, None)
+            used.discard(have)
+            continue
         titles = c.get("titles", [])
         if os.path.exists(path) and have and (not titles or have in titles):
             continue  # keep the current photo

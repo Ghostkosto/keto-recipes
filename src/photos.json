@@ -65,5 +65,17 @@
   "chocolate_mug_cake": {"titles": [], "queries": ["chocolate mug cake", "mug cake"]},
   "panna_cotta": {"titles": [], "queries": ["panna cotta strawberries", "panna cotta"]},
   "almond_cookies": {"titles": ["File:Almond Biscuit Bakery.JPG"], "queries": ["amygdalota", "almond cookies", "italian almond cookies amaretti"]},
-  "berries_mascarpone": {"titles": ["File:Whipped cream with nuts and berries in a cup (KETO, LCHF, Low Carb, Gluten free, FIT) - 52774527801.jpg"], "queries": ["berries cream glass", "strawberries cream dessert glass", "berries mascarpone"]}
+  "berries_mascarpone": {"titles": ["File:Whipped cream with nuts and berries in a cup (KETO, LCHF, Low Carb, Gluten free, FIT) - 52774527801.jpg"], "queries": ["berries cream glass", "strawberries cream dessert glass", "berries mascarpone"]},
+  "avocado_egg_boats": {"titles": [], "queries": ["baked avocado egg", "egg baked in avocado", "avocado egg"]},
+  "cloud_bread": {"titles": [], "queries": ["cloud bread", "oopsie bread"]},
+  "eggs_benedict": {"titles": [], "queries": ["eggs benedict portobello", "eggs benedict hollandaise", "eggs benedict"]},
+  "breakfast_skillet": {"titles": [], "queries": ["breakfast skillet sausage eggs", "sausage eggs skillet", "eggs sausage pan"]},
+  "keto_granola": {"titles": [], "queries": ["nut granola", "grain free granola", "granola nuts seeds jar"]},
+  "flax_porridge": {"titles": [], "queries": ["flaxseed porridge", "chia porridge bowl", "porridge raspberries bowl"]},
+  "egg_wrap": {"titles": [], "queries": ["egg wrap", "omelette wrap", "egg crepe roll"]},
+  "halloumi_eggs": {"titles": [], "queries": ["halloumi eggs breakfast", "fried halloumi eggs", "halloumi breakfast"]},
+  "strawberry_smoothie": {"titles": [], "queries": ["strawberry smoothie", "strawberry milkshake glass"]},
+  "breakfast_sandwich": {"titles": [], "queries": ["breakfast sandwich egg bacon cheese", "egg bacon cheese sandwich", "breakfast sandwich"]},
+  "cream_cheese_crepes": {"titles": [], "queries": ["crepes raspberries", "crepes berries cream", "crêpes"]},
+  "air_fryer_eggs": {"titles": [], "queries": ["hard boiled eggs halved", "boiled eggs bowl", "hard-boiled eggs"]}
 }

@@ -45,6 +45,7 @@ module.exports = {
   prosciutto:      { el: 'Προσούτο', en: 'Prosciutto', aisle: 'deli', unit: 'g', nc: 0.5 },
   smoked_salmon:   { el: 'Καπνιστός σολομός', en: 'Smoked salmon', aisle: 'deli', unit: 'g', nc: 0 },
   salami:          { el: 'Σαλάμι αέρος', en: 'Salami', aisle: 'deli', unit: 'g', nc: 1.5 },
+  turkey_ham:      { el: 'Γαλοπούλα καπνιστή σε φέτες', en: 'Sliced smoked turkey', aisle: 'deli', unit: 'g', nc: 2 },
 
   /* ---------- fish ---------- */
   salmon:          { el: 'Φιλέτο σολομού', en: 'Salmon fillet', aisle: 'fish', unit: 'g', nc: 0 },

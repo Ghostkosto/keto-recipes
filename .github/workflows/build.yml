@@ -1,0 +1,55 @@
+name: Build feed
+
+# Downloads any missing recipe photos, rebuilds feed/recipes.json and commits it.
+# Also pushes contact sheets of all photos to the "review" branch.
+on:
+  push:
+    branches: [main]
+    paths: ['src/**', 'scripts/**', '.github/workflows/build.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed
+  cancel-in-progress: false
+
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Photos
+        run: |
+          pip install --quiet pillow
+          python scripts/fetch_photos.py
+      - name: Feed
+        run: node scripts/build.js
+      - name: Commit the feed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add feed
+          if git diff --cached --quiet; then
+            echo "Feed unchanged"
+          else
+            git commit -qm "Update feed [skip ci]"
+            git push
+          fi
+      - name: Review sheets
+        run: |
+          python scripts/review_sheet.py
+          mv review /tmp/review
+          git checkout --orphan review
+          git rm -rfq .
+          cp /tmp/review/* .
+          git add -A
+          git commit -qm "Photo review"
+          git push -f origin review

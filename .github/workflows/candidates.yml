@@ -1,0 +1,36 @@
+name: Photo candidates
+
+# Manual helper: contact sheets of possible Commons photos for src/candidates.json,
+# pushed to the "candidates" branch, to pick photos by hand.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['src/candidates.json']
+
+permissions:
+  contents: write
+
+jobs:
+  sheets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Contact sheets
+        run: |
+          pip install --quiet pillow
+          python scripts/photo_candidates.py
+      - name: Push to the candidates branch
+        run: |
+          mv candidates /tmp/candidates
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git checkout --orphan candidates
+          git rm -rfq .
+          cp /tmp/candidates/* .
+          git add -A
+          git commit -qm "Photo candidates"
+          git push -f origin candidates

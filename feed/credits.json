@@ -1,4 +1,11 @@
 {
+ "air_fryer_eggs": {
+  "artist": "PattayaPatrol",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:DFC_6062_Khao_Moo_Deng_roasted_pork_over_steamed_rice_with_rich_red_sauce_served_with_sliced_hard-boiled_eggs_and_fresh_cucumber.jpg",
+  "title": "File:DFC 6062 Khao Moo Deng roasted pork over steamed rice with rich red sauce served with sliced hard-boiled eggs and fresh cucumber.jpg"
+ },
  "almond_cookies": {
   "artist": "Triv.rao",
   "license": "CC BY-SA 4.0",
@@ -27,6 +34,13 @@
   "page": "https://commons.wikimedia.org/wiki/File:DFC_0816_A_close-up_of_a_hand_holding_a_plastic_cup_while_a_chocolatey_smoothie_is_poured_over_ice_from_a_blender.jpg",
   "title": "File:DFC 0816 A close-up of a hand holding a plastic cup while a chocolatey smoothie is poured over ice from a blender.jpg"
  },
+ "avocado_egg_boats": {
+  "artist": "Gordana Adzieva",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B5%D1%87%D0%B5%D0%BD%D0%BE_%D0%B0%D0%B2%D0%BE%D0%BA%D0%B0%D0%B4%D0%BE_%D1%81%D0%BE_%D1%98%D0%B0%D1%98%D1%86%D0%B5.jpg",
+  "title": "File:Печено авокадо со јајце.jpg"
+ },
  "bacon_chicken_bites": {
   "artist": "Michele Frazier from USA",
   "license": "CC BY 2.0",
@@ -54,6 +68,20 @@
   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Whipped_cream_with_nuts_and_berries_in_a_cup_(KETO,_LCHF,_Low_Carb,_Gluten_free,_FIT)_-_52774527801.jpg",
   "title": "File:Whipped cream with nuts and berries in a cup (KETO, LCHF, Low Carb, Gluten free, FIT) - 52774527801.jpg"
+ },
+ "breakfast_sandwich": {
+  "artist": "John Verive",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Egg_and_cheese_breakfast_sandwich.jpg",
+  "title": "File:Egg and cheese breakfast sandwich.jpg"
+ },
+ "breakfast_skillet": {
+  "artist": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:BREAKFAST_SKILLET_-_T_@_The_Dials_2025-07-18.jpg",
+  "title": "File:BREAKFAST SKILLET - T @ The Dials 2025-07-18.jpg"
  },
  "broccoli_cheddar_soup": {
   "artist": "Ken Hawkins from SC, USA",
@@ -139,6 +167,13 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tassenkuchen_.jpg",
   "title": "File:Tassenkuchen .jpg"
  },
+ "cloud_bread": {
+  "artist": "Donatas Dabravolskas",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sweet_Bread_Mountain.jpg",
+  "title": "File:Sweet Bread Mountain.jpg"
+ },
  "cobb_salad": {
   "artist": "Ser Amantio di Nicolao",
   "license": "CC BY-SA 4.0",
@@ -159,6 +194,13 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:A_plate_of_coconut_and_chocolate_coconut_macaroons_served_on_Passover.jpg",
   "title": "File:A plate of coconut and chocolate coconut macaroons served on Passover.jpg"
+ },
+ "cream_cheese_crepes": {
+  "artist": "Vegan Feast Catering",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vegan_Crepe_Cake_(4652878205).jpg",
+  "title": "File:Vegan Crepe Cake (4652878205).jpg"
  },
  "crispy_calamari": {
   "artist": "ppacificvancouver",
@@ -202,12 +244,26 @@
   "page": "https://commons.wikimedia.org/wiki/File:Egg_salad_01.jpg",
   "title": "File:Egg salad 01.jpg"
  },
+ "egg_wrap": {
+  "artist": "Harris & Ewing",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Easter_egg_roll_boys2.jpg",
+  "title": "File:Easter egg roll boys2.jpg"
+ },
  "eggplant_feta": {
   "artist": "David Reber from Kansas City, USA",
   "license": "CC BY-SA 2.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
   "page": "https://commons.wikimedia.org/wiki/File:The_Food_at_Davids_Kitchen_011.jpg",
   "title": "File:The Food at Davids Kitchen 011.jpg"
+ },
+ "eggs_benedict": {
+  "artist": "Matt @ PEK from Taipei, Taiwan",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Eggs_Benedict_with_Canadian_Ham_and_Hollandaise_sauce_(5204780516).jpg",
+  "title": "File:Eggs Benedict with Canadian Ham and Hollandaise sauce (5204780516).jpg"
  },
  "fathead_pizza": {
   "artist": "avlxyz",
@@ -237,6 +293,13 @@
   "page": "https://commons.wikimedia.org/wiki/File:Grilled_Sardines_5.50%E2%82%AC_Marisqueira_O_Varino_Nazar%C3%A9_(3785526688).jpg",
   "title": "File:Grilled Sardines 5.50€ Marisqueira O Varino Nazaré (3785526688).jpg"
  },
+ "halloumi_eggs": {
+  "artist": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Halloumi_Breakfast_-_Fine_Eat_Kitchen_2025-01-26.jpg",
+  "title": "File:Halloumi Breakfast - Fine Eat Kitchen 2025-01-26.jpg"
+ },
  "halloumi_fries": {
   "artist": "Andy Li",
   "license": "CC0",
@@ -257,6 +320,13 @@
   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "page": "https://commons.wikimedia.org/wiki/File:Kofta_Curry_(cropped).JPG",
   "title": "File:Kofta Curry (cropped).JPG"
+ },
+ "keto_granola": {
+  "artist": "Famartin",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:2023-04-29_10_06_23_A_sample_of_Erin_Baker%27s_Homestyle_Fruit_and_Nut_Granola_in_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
+  "title": "File:2023-04-29 10 06 23 A sample of Erin Baker's Homestyle Fruit and Nut Granola in Ewing Township, Mercer County, New Jersey.jpg"
  },
  "kolokithokeftedes": {
   "artist": "Benoît Prieur",
@@ -404,6 +474,13 @@
   "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
   "page": "https://commons.wikimedia.org/wiki/File:Mixed_nuts_small_wood2.jpg",
   "title": "File:Mixed nuts small wood2.jpg"
+ },
+ "strawberry_smoothie": {
+  "artist": "Pamela Bates",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Strawberry_smoothie_from_above_(8868423660).jpg",
+  "title": "File:Strawberry smoothie from above (8868423660).jpg"
  },
  "stuffed_chicken": {
   "artist": "Cikumugambi",

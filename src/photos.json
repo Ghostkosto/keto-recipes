@@ -77,5 +77,6 @@
   "strawberry_smoothie": {"titles": [], "queries": ["strawberry smoothie", "strawberry milkshake glass"]},
   "breakfast_sandwich": {"titles": [], "queries": ["breakfast sandwich egg bacon cheese", "egg bacon cheese sandwich", "breakfast sandwich"]},
   "cream_cheese_crepes": {"titles": [], "queries": ["crepes raspberries", "crepes berries cream", "crêpes"]},
-  "air_fryer_eggs": {"titles": ["File:Boiled Egg - Crossection.jpg"], "queries": ["hard boiled eggs halved", "boiled eggs bowl", "hard-boiled eggs"]}
+  "air_fryer_eggs": {"titles": ["File:Boiled Egg - Crossection.jpg"], "queries": ["hard boiled eggs halved", "boiled eggs bowl", "hard-boiled eggs"]},
+  "cheese_crisps": {"titles": ["File:Parmesan Cheese Crisps.jpg"], "queries": ["parmesan crisps", "frico cheese", "cheese crisps"]}
 }

@@ -162,5 +162,26 @@ module.exports = [
         '{{pre:150:bake}}Put the sheet on its bottom paper {{plate}}. {{bake:150:15–18}}, until golden and dry. Let it cool and break along the lines.'
       ]
     }
+  },
+  {
+    id: 'cheese_crisps', cat: 'snacks', time: 10, serv: 2,
+    air: [['airfry', 180, 6]],
+    title: N('Τσιπς τυριού', 'Cheese crisps'),
+    desc: N('Τραγανό σνακ με ένα βασικό υλικό.', 'A crunchy snack from one main ingredient.'),
+    ing: [['parmesan', 80, N('ή κεφαλοτύρι', 'or kefalotyri')], ['oregano', 0.5], ['paprika', 0.25]],
+    steps: {
+      el: [
+        'Κόψε λαδόχαρτο λίγο μικρότερο από {{the_plate}}: οι άκρες που περισσεύουν πιάνουν αέρα και ο ανεμιστήρας σηκώνει το χαρτί. Ακόμα καλύτερα, χρησιμοποίησε σιλικονένιο ταψάκι αντί για χαρτί.',
+        'Βάλε πάνω στο χαρτί μικρούς σωρούς τριμμένο τυρί με απόσταση μεταξύ τους, και οπωσδήποτε έναν σε κάθε γωνία, για να μένει το χαρτί κάτω. Πασπάλισε ρίγανη ή πάπρικα.',
+        '{{pre:180}}Βάλε το χαρτί μέσα μόνο φορτωμένο με το τυρί, ποτέ άδειο: αν σηκωθεί, μπορεί να ακουμπήσει την αντίσταση. {{airfry:180:6}}.',
+        'Άφησέ τα 2–3 λεπτά να κρυώσουν: τότε τραγανίζουν.'
+      ],
+      en: [
+        'Cut baking paper slightly smaller than {{the_plate}}: overhanging edges catch the air and the fan lifts the paper. Better still, use a silicone tray instead of paper.',
+        'Make small piles of grated cheese on the paper, spaced apart, with one in each corner so the paper stays down. Sprinkle with oregano or paprika.',
+        '{{pre:180}}Only put the paper in once it is loaded with cheese, never empty: if it lifts, it can touch the heating element. {{airfry:180:6}}.',
+        'Let them cool for 2–3 minutes; that is when they turn crunchy.'
+      ]
+    }
   }
 ];

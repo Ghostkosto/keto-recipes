@@ -2,11 +2,14 @@
 /* Builds feed/recipes.json, the file the Keto Kitchen app downloads.
 
    - checks every recipe (ingredients, units, step tokens, both languages)
-   - works out net carbs per serving from the ingredient table
+   - works out net carbs and macros (kcal, protein, fat) per serving from the
+     ingredient table; kcal = 4 × protein + 9 × fat + 4 × net carbs
    - adds the photo path (with a version hash) and the photo credits
 
    Usage: node scripts/build.js            (writes feed/recipes.json)
-          node scripts/build.js --check    (only checks, prints the carbs)  */
+          node scripts/build.js --check    (only checks, prints carbs and macros)
+          node scripts/build.js --macros FILE.js  (prints macros for the app's
+                                                   built-in recipes, as JSON)  */
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -68,15 +71,28 @@ function checkTokens(id, s) {
   return used;
 }
 
-function netCarbs(r) {
-  let total = 0;
+function totals(r) {
+  const t = { nc: 0, p: 0, f: 0 };
   r.ing.forEach(([iid, q]) => {
     const g = ING[iid];
-    if (!g || typeof g.nc !== 'number') return;
-    total += (g.unit === 'g' || g.unit === 'ml') ? q * g.nc / 100 : q * g.nc;
+    if (!g) return;
+    const k = (g.unit === 'g' || g.unit === 'ml') ? q / 100 : q;
+    ['nc', 'p', 'f'].forEach(m => { if (typeof g[m] === 'number') t[m] += k * g[m]; });
   });
-  const per = total / r.serv;
+  return t;
+}
+
+function netCarbs(r) {
+  const per = totals(r).nc / r.serv;
   return per < 2 ? Math.round(per * 10) / 10 : Math.round(per * 2) / 2;
+}
+
+/* per serving (or per piece): kcal rounded to 5, grams to 1 (or 0.1 under 2 g) */
+function macros(r) {
+  const t = totals(r), n = r.serv;
+  const g = x => (x < 2 ? Math.round(x * 10) / 10 : Math.round(x));
+  const p = t.p / n, f = t.f / n, nc = t.nc / n;
+  return { kcal: Math.round((4 * p + 9 * f + 4 * nc) / 5) * 5, p: g(p), f: g(f) };
 }
 
 function photo(id) {
@@ -92,7 +108,9 @@ function main() {
     if (!text(g)) err('ingredient ' + k, 'needs el and en names');
     if (!UNITS.includes(g.unit)) err('ingredient ' + k, 'unknown unit ' + g.unit);
     if (!AISLES.includes(g.aisle)) err('ingredient ' + k, 'unknown aisle ' + g.aisle);
-    if (typeof g.nc !== 'number') err('ingredient ' + k, 'missing nc (net carbs)');
+    ['nc', 'p', 'f'].forEach(m => {
+      if (typeof g[m] !== 'number' || g[m] < 0) err('ingredient ' + k, 'missing ' + m + ' (net carbs, protein, fat)');
+    });
   });
 
   const recipes = loadRecipes();
@@ -136,7 +154,7 @@ function main() {
       if (!cooks) err(id, 'has air settings but no cooking tokens in the steps');
     }
     const carbs = typeof r.carbs === 'number' ? r.carbs : netCarbs(r);
-    const rec = Object.assign({}, r, { carbs });
+    const rec = Object.assign({}, r, { carbs, mac: macros(r) });
     const img = photo(id);
     if (img) rec.img = img;
     out.push(rec);
@@ -158,7 +176,7 @@ function main() {
   console.log(`${out.length} recipes · ` + CATS.map(c => `${c} ${byCat[c] || 0}`).join(' · '));
   console.log(`photos: ${out.filter(r => r.img).length}/${out.length}`);
   if (checkOnly) {
-    out.forEach(r => console.log(`  ${r.carbs.toString().padStart(4)} g  ${r.id}${r.yield ? ' (per piece)' : ''}`));
+    out.forEach(r => console.log(`  ${String(r.mac.kcal).padStart(4)} kcal  P ${String(r.mac.p).padStart(4)}  F ${String(r.mac.f).padStart(4)}  C ${r.carbs.toString().padStart(4)}  ${r.id}${r.yield ? ' (per piece)' : ''}`));
     return;
   }
 
@@ -181,4 +199,22 @@ function main() {
   console.log(`feed/recipes.json: ${(fs.statSync(path.join(ROOT, 'feed', 'recipes.json')).size / 1024).toFixed(0)} KB`);
 }
 
-main();
+/* node scripts/build.js --macros path/to/app/recipes.js
+   prints {id: {carbs, mac}} for the app's built-in recipes, computed with this
+   ingredient table, so the app and the feed use the same numbers. */
+function builtInMacros(file) {
+  global.window = {};
+  require(path.resolve(file));
+  const data = global.window.KETO_DATA;
+  const res = {};
+  data.recipes.forEach(r => {
+    const miss = r.ing.map(x => x[0]).filter(i => !ING[i]);
+    if (miss.length) { console.error(r.id + ': unknown ingredients ' + miss.join(', ')); process.exitCode = 1; return; }
+    res[r.id] = { carbs: netCarbs(r), mac: macros(r) };
+  });
+  console.log(JSON.stringify(res));
+}
+
+const mi = process.argv.indexOf('--macros');
+if (mi > 0) builtInMacros(process.argv[mi + 1]);
+else main();
